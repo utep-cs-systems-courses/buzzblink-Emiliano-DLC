@@ -68,6 +68,5 @@ switch_interrupt_handler()
   else if(sw4_curr_stat)
     switchSM = 4;
   state_advance(switchSM);
-  led_update();
   
 }
