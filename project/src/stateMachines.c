@@ -63,7 +63,7 @@ void SWtree(){
 }
 
 void SWfour(){
-  setOff();
+  turnOff();
   buzzer_set_period(0);
 }
 
