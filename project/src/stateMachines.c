@@ -20,8 +20,8 @@ void toggle_red()		/* always toggle! */
     break;
   }			/* always changes an led */
 
-  red_on = 0;
-  green_on = 1;
+  red_on = 1;
+  green_on = 0;
   led_changed = 1;
   led_update();
 }
@@ -33,8 +33,8 @@ void toggle_green()	/* only toggle green if red is on!  */
     green_on ^= 1;
     changed = 1;
   }*/
-  red_on = 1;
-  green_on = 0;
+  red_on = 0;
+  green_on = 1;
   led_changed = 1;
   led_update();
 }
@@ -42,6 +42,13 @@ void toggle_green()	/* only toggle green if red is on!  */
 void turnOff(){
   red_on = 0;
   green_on = 0;
+  led_changed = 1;
+  led_update();
+}
+
+void turnOn(){
+  red_on = 1;
+  green_on = 1;
   led_changed = 1;
   led_update();
 }
