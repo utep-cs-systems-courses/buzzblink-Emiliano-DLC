@@ -73,7 +73,7 @@ switch_interrupt_handler()
   {
     switchSM = 4;
   }
-  state_advance(switchSM)
+  state_advance(switchSM);
   led_update();
   
 }
