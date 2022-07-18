@@ -63,9 +63,9 @@ void SWone(){
 void SWtwo(){
   int i = 0;
   int something[] = {1,2,3,4,4,3,2,1,3,4,2,1,2,3};
-  for(i < 0; i < sizeOf(something); i++){
-   if(something[i] == 1){togle_red();}
-   if(something[i] == 2){togle_green();}
+  for(i < 0; i < sizeof(something); i++){
+   if(something[i] == 1){toggle_red();}
+   if(something[i] == 2){toggle_green();}
    if(something[i] == 3){turnOff();}
    if(something[i] == 4){turnOn();}
    turnOn();
