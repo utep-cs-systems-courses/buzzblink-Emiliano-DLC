@@ -71,19 +71,19 @@ void SWfour(){
 void state_advance(c)		/* alternate between toggling red & green */
 {
   switch (c){
-    case 0:
+    case 1:
     SWone();
     break;
 
-    case 1:
+    case 2:
     SWtwo();
     break;
 
-    case 2:
+    case 3:
     SWtree();
     break;
 
-    case 3:
+    case 4:
     SWfour();
     break;
   }
