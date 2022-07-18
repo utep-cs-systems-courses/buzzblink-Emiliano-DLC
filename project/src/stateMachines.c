@@ -59,7 +59,7 @@ void SWtwo(){
 }
 
 void SWtree(){
-  buzzer_set_period(10);
+  buzzer_set_period(1000);
 }
 
 void SWfour(){
