@@ -54,25 +54,17 @@ switch_interrupt_handler()
   //Reset buttons
 
   //reset sw1
-  if (sw1_curr_stat)
-  {                             
+  if (sw1_curr_stat)                             
    switchSM = 1;
-  }
   // reset sw2
-  elif(sw2_curr_stat)
-  {
+  else if(sw2_curr_stat)
     switchSM = 2;
-  }
   // reset sw3
-  elif(sw3_curr_stat)
-  {
+  else if(sw3_curr_stat)
     switchSM = 3;
-  }
   // reset sw4
-  elif(sw4_curr_stat)
-  {
+  else if(sw4_curr_stat)
     switchSM = 4;
-  }
   state_advance(switchSM);
   led_update();
   
