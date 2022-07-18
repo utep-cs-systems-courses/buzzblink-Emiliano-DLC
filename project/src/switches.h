@@ -26,17 +26,7 @@ extern char sw2_curr_stat;
 extern char sw3_curr_stat;
 extern char sw4_curr_stat;
 
-//Pressed status
-extern char sw1_press;
-extern char sw2_press;
-extern char sw3_press;
-extern char sw4_press;
-
-//Temporary variales to store the previous state 
-extern char sw1_temp;
-extern char sw2_temp;
-extern char sw3_temp;
-extern char sw4_temp;
+extern char switchSM;
 
 
 #endif // included

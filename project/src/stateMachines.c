@@ -2,8 +2,9 @@
 #include "stateMachines.h"
 #include "led.h"
 #include "buzzer.h"
+#include "switches.h"
 
-char toggle_red()		/* always toggle! */
+void toggle_red()		/* always toggle! */
 {
   static char state = 0;
 
@@ -16,23 +17,61 @@ char toggle_red()		/* always toggle! */
     red_on = 0;
     state = 0;
     break;
-  }
-  return 1;			/* always changes an led */
+  }			/* always changes an led */
 }
 
-char toggle_green()	/* only toggle green if red is on!  */
+void toggle_green()	/* only toggle green if red is on!  */
 {
   char changed = 0;
   if (red_on) {
     green_on ^= 1;
     changed = 1;
   }
-  return changed;
+}
+
+//Buzz
+void SWone(){
+
+
+}
+
+void SWtwo(){
+
+}
+
+void SWtree(){
+
+}
+
+void SWfour(){
+
 }
 
 
-void state_advance()		/* alternate between toggling red & green */
+void state_advance(c)		/* alternate between toggling red & green */
 {
+  switch (c){
+    case 0:
+    SWone();
+    break;
+    case 1:
+    SWtwo();
+    break;
+    case 2:
+    SWtree();
+    break;
+    case 3:
+    SWfour();
+    break;
+  }
+  {
+  case /* constant-expression */:
+    /* code */
+    break;
+  
+  default:
+    break;
+  }
   char changed = 0;  
 
   static enum {R=0, G=1} color = G;
