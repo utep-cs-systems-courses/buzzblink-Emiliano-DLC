@@ -2,10 +2,9 @@
 #define stateMachine_included
 
 void toggle_red();
-
-
 void toggle_green();
 void turnOff();
+void turnOn();
 void SWone();
 void SWtwo();
 void SWtree();
