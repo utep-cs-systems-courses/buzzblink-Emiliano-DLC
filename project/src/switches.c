@@ -56,16 +56,16 @@ switch_interrupt_handler()
   //Reset buttons
 
   //reset sw1
-  if (sw1_curr_stat == 0)                             
+  if (sw1_curr_stat == 1)                             
    switchSM = 1;
   // reset sw2
-  else if(sw2_curr_stat == 0)
+  else if(sw2_curr_stat == 1)
     switchSM = 2;
   // reset sw3
-  else if(sw3_curr_stat == 0)
+  else if(sw3_curr_stat == 1)
     switchSM = 3;
   // reset sw4
-  else if(sw4_curr_stat == 0)
+  else if(sw4_curr_stat == 1)
     switchSM = 4;
   state_advance(switchSM);
   
