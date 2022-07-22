@@ -13,6 +13,8 @@ sw2_curr_stat = 0;
 sw3_curr_stat = 0;
 sw4_curr_stat = 0;*/
 
+short switchSM;
+
 //char switch_state_down, switch_state_changed; /* effectively boolean */
 
 static char 
@@ -50,8 +52,7 @@ switch_interrupt_handler()
   char sw2_curr_stat = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
   char sw3_curr_stat = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
   char sw4_curr_stat = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
-  
-  char switchSM;
+ 
 
   //Reset buttons
 
