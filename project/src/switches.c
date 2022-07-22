@@ -13,7 +13,7 @@ sw2_curr_stat = 0;
 sw3_curr_stat = 0;
 sw4_curr_stat = 0;*/
 
-short switchSM;
+char switchSM;
 
 //char switch_state_down, switch_state_changed; /* effectively boolean */
 
