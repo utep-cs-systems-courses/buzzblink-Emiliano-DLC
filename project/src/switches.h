@@ -26,7 +26,7 @@ extern char sw2_curr_stat;
 extern char sw3_curr_stat;
 extern char sw4_curr_stat;
 
-extern char switchSM;
+//extern char switchSM;
 
 
 #endif // included
