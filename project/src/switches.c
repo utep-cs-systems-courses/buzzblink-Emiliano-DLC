@@ -4,6 +4,8 @@
 #include "buzzer.h"
 #include "stateMachines.h"
 
+short switchSM;
+
 //TODO: Change P1 and p1 to P2 and p2 respectively
 
 //Status for each button
@@ -43,31 +45,25 @@ switch_interrupt_handler()
 {
   char p2val = switch_update_interrupt_sense();
 
-  //switch_state_down = (p1val & SW1) ? 0 : 1; /* 0 when SW1 is up */
-  //switch_state_changed = 1;
-  //led_update();
-
-  //
+  //Chech each button
   char sw1_curr_stat = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
   char sw2_curr_stat = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
   char sw3_curr_stat = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
   char sw4_curr_stat = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
  
 
-  //Reset buttons
-
-  //reset sw1
-  if (sw1_curr_stat == 1)                             
+  if (sw1_curr_stat == 0)                             
    switchSM = 1;
-  // reset sw2
-  else if(sw2_curr_stat == 1)
+
+  else if(sw2_curr_stat == 0)
     switchSM = 2;
-  // reset sw3
-  else if(sw3_curr_stat == 1)
+  
+  else if(sw3_curr_stat == 0)
     switchSM = 3;
-  // reset sw4
-  else if(sw4_curr_stat == 1)
+ 
+  else if(sw4_curr_stat == 0)
     switchSM = 4;
+    
   state_advance(switchSM);
   
 }
