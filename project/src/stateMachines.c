@@ -8,18 +8,6 @@
 void toggle_red()		/* always toggle! */
 {
   static char state = 0;
-
-  /*switch (state) {
-  case 0:
-    red_on = 1;
-    state = 1;
-    break;
-  case 1:
-    red_on = 0;
-    state = 0;
-    break;
-  }			/* always changes an led */
-
   red_on = 1;
   green_on = 0;
   led_changed = 1;
@@ -28,11 +16,6 @@ void toggle_red()		/* always toggle! */
 
 void toggle_green()	/* only toggle green if red is on!  */
 {
-  /*char changed = 0;
-  if (red_on) {
-    green_on ^= 1;
-    changed = 1;
-  }*/
   red_on = 0;
   green_on = 1;
   led_changed = 1;
@@ -47,43 +30,28 @@ void turnOff(){
 }
 
 void turnOn(){
+  red_on = 0;
+  green_on = 0;
+  led_changed = 1;
+  led_update();
+  buzzer_set_period(0);
+}
+
+
+void SWone(){
   red_on = 1;
   green_on = 1;
   led_changed = 1;
   led_update();
-}
-
-
-//Buzz
-void SWone(){
-  toggle_red();
+  buzzer_set_period(5000);
 
 }
 
 void SWtwo(){
-  int i = 0;
-  int something[] = {1,2,3,4,4,3,2,1,3,4,2,1,2,3};
-  for(i < 0; i < sizeof(something); i++){
-   if(something[i] == 1){
-     toggle_red();
-     led_update();
-   }
-   if(something[i] == 2){
-     toggle_green();
-     led_update();
-   }
-   if(something[i] == 3){
-     turnOff();
-     led_update();
-   }
-   if(something[i] == 4){
-     turnOn();
-     led_update();
-   }
-   turnOn();
-   led_update();
-  }
-
+ red_on ^= 1;
+ green_on ^= 1;
+ led_changed ^= 1;
+ led_update();
 }
 
 void SWtree(){
@@ -91,7 +59,10 @@ void SWtree(){
 }
 
 void SWfour(){
-  turnOff();
+  red_on = 0;
+  green_on = 0;
+  led_changed = 1;
+  led_update();
   buzzer_set_period(0);
 }
 
