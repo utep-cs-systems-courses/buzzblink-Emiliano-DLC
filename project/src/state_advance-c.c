@@ -6,7 +6,7 @@
 #include "stateMachines.h"
 #include "state_advance.h"
 
-void state_advance(c)		/* alternate between toggling red & green */
+void state_advance(switchSM)		/* alternate between toggling red & green */
 {
   switch (c){
     case 1:
