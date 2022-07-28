@@ -4,7 +4,7 @@
 #include "buzzer.h"
 #include "stateMachines.h"
 
-short switchSM;
+char switchSM;
 
 //TODO: Change P1 and p1 to P2 and p2 respectively
 
