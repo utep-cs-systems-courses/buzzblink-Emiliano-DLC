@@ -8,7 +8,7 @@
 
 void state_advance(switchSM)		/* alternate between toggling red & green */
 {
-  switch (c){
+  switch (switchSM){
     case 1:
     SWone();
     break;
