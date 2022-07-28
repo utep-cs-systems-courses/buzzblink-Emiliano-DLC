@@ -96,26 +96,5 @@ void SWfour(){
 }
 
 
-void state_advance(c)		/* alternate between toggling red & green */
-{
-  switch (c){
-    case 1:
-    SWone();
-    break;
-
-    case 2:
-    SWtwo();
-    break;
-
-    case 3:
-    SWtree();
-    break;
-
-    case 4:
-    SWfour();
-    break;
-  }
-}
-
 
 
