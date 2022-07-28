@@ -10,6 +10,6 @@ void SWtwo();
 void SWtree();
 void SWfour();
 
-void state_advance(c);
+void state_advance();
 
 #endif // included
