@@ -9,19 +9,19 @@
 void state_advance(switchSM)		/* alternate between toggling red & green */
 {
   switch (switchSM){
-    case 1:
+    case 0:
     SWone();
     break;
 
-    case 2:
+    case 1:
     SWtwo();
     break;
 
-    case 3:
+    case 2:
     SWtree();
     break;
 
-    case 4:
+    case 3:
     SWfour();
     break;
   }
