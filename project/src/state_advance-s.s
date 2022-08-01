@@ -22,13 +22,13 @@ state_advance:
 case0:
     call #SWone
     jmp end
-case0:
+case1:
     call #SWtwo
     jmp end
-case0:
+case2:
     call #SWtree
     jmp end
-case0:
+case3:
     call #SWfour
     jmp end
 end:
