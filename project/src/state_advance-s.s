@@ -32,5 +32,5 @@ case0:
     call #SWfour
     jmp end
 end:
-  pop r0
+    pop r0
     
