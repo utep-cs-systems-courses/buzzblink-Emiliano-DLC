@@ -55,6 +55,11 @@ void SWtwo(){
 }
 
 void SWtree(){
+  red_on = 1;
+  green_on = 1;
+  led_changed = 1;
+  led_update();
+  buzzer_set_period(5000);
   buzzer_set_period(1000);
 }
 
