@@ -8,7 +8,7 @@ LDFLAGS		= -L/opt/ti/msp430_gcc/include
 CC              = msp430-elf-gcc
 AS              = msp430-elf-as
 
-all: button.elf 
+all: button-c.elf button-s.elf 
 
 #additional rules for files
 button-c.elf: ${COMMON_OBJECTS} state_advance-c.o ../lib/libTimer.a
@@ -18,7 +18,7 @@ button-c.elf: ${COMMON_OBJECTS} state_advance-c.o ../lib/libTimer.a
 button-s.elf: ${COMMON_OBJECTS} state_advance-s.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
-load: button-c.elf
+load-c: button-c.elf
 	msp430loader.sh button-c.elf
 
 load-s: button-s.elf
