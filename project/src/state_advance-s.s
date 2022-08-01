@@ -2,35 +2,36 @@
   .p2align 1,0
   .text
 
-; define switch
-sw: .word case0
-    .word case1
-    .word case2
-    .word case3
+				; define switch
+sw:
+	.word case1
+	.word case2
+	.word case3
+	.word case0
     
-; method
-    .global state_advance
-; variables
-    .extern switchSM
+				; method
+	.global state_advance
+				; variables
+	.extern switchSM
     
 state_advance:
-    cmp &switchSM, #4 ; if switchSm > 4 jump to end
-    jnc end
-    mov &switchSM, r12 ; move sw[switchSM] to r12
-    add r12, r12
-    mov sw(r12), r0
+	cmp &switchSM, #4 ; if switchSm > 4 jump to end
+	jnc end
+	mov &switchSM, r12 ; move sw[switchSM] to r12
+	add r12, r12
+	mov sw(r12), r0
 case0:
-    call #SWone
-    jmp end
+	call #SWone
+	jmp end
 case1:
-    call #SWtwo
-    jmp end
+	call #SWtwo
+	jmp end
 case2:
-    call #SWtree
-    jmp end
+	call #SWtree
+	jmp end
 case3:
-    call #SWfour
-    jmp end
+	call #SWfour
+	jmp end
 end:
-    pop r0
+	pop r0
     
