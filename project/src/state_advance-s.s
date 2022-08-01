@@ -19,4 +19,18 @@ state_advance:
     mov &switchSM, r12 ; move sw[switchSM] to r12
     add r12, r12
     mov sw(r12), r0
+case0:
+    call #SWone
+    jmp end
+case0:
+    call #SWtwo
+    jmp end
+case0:
+    call #SWtree
+    jmp end
+case0:
+    call #SWfour
+    jmp end
+end:
+  pop r0
     
