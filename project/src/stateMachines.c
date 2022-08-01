@@ -55,7 +55,7 @@ void SWtwo(){
 }
 
 void SWtree(){
-  red_on = 1;
+  red_on ^= 1;
   green_on = 1;
   led_changed = 1;
   led_update();
