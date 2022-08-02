@@ -13,6 +13,7 @@ sw2_curr_stat = 0;
 sw3_curr_stat = 0;
 sw4_curr_stat = 0;*/
 
+char switch_state_changed;
 char switchSM;
 
 //char switch_state_down, switch_state_changed; /* effectively boolean */
@@ -54,6 +55,7 @@ switch_interrupt_handler()
   else if(sw2_curr_stat == 0){switchSM = 1;}
   else if(sw3_curr_stat == 0){switchSM = 2;}
   else if(sw4_curr_stat == 0){switchSM = 3;} 
+  switch_state_changed = 1;
   state_advance(switchSM);
   
 }
