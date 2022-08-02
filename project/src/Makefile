@@ -19,10 +19,10 @@ button-s.elf: ${COMMON_OBJECTS} state_advance-s.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load-c: button-c.elf
-	msp430loader.sh $^
+	msp430loader.sh button-c.elf
 
 load-s: button-s.elf
-	msp430loader.sh $^
+	msp430loader.sh button-s.elf
 
 clean:
 	rm -f *.o *.elf *~ *#
