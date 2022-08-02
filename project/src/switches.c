@@ -50,10 +50,10 @@ switch_interrupt_handler()
   char sw4_curr_stat = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
  
 
-  if (sw1_curr_stat == 1){switchSM = 0;}
-  else if(sw2_curr_stat == 1){switchSM = 1;}
-  else if(sw3_curr_stat == 1){switchSM = 2;}
-  else if(sw4_curr_stat == 1){switchSM = 3;} 
+  if (sw1_curr_stat == 0){switchSM = 0;}
+  else if(sw2_curr_stat == 0){switchSM = 1;}
+  else if(sw3_curr_stat == 0){switchSM = 2;}
+  else if(sw4_curr_stat == 0){switchSM = 3;} 
   state_advance(switchSM);
   
 }
