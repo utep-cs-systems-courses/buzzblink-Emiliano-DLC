@@ -2,7 +2,7 @@
   	.p2align 1,0
   	
 	.text
-jt:	.word case0 ; define switch
+sw:	.word case0 ; define switch
 	.word case1
 	.word case2
 	.word case3
