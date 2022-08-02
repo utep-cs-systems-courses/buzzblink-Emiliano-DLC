@@ -1,17 +1,16 @@
-  .arch msp430g2553
-  .p2align 1,0
-  .text
+	.arch msp430g2553
+  	.p2align 1,0
+  	.text
 
-				; define switch
-sw:
+	; define switch
+sw:	.word case0
 	.word case1
 	.word case2
 	.word case3
-	.word case0
     
-				; method
+	; method
 	.global state_advance
-				; variables
+	; variables
 	.extern switchSM
     
 state_advance:
