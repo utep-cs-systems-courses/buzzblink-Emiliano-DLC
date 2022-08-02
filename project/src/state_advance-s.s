@@ -1,17 +1,14 @@
 	.arch msp430g2553
   	.p2align 1,0
-  	.text
-
-	; define switch
-sw:	.word case0
+  	
+	.text
+jt:	.word case0 ; define switch
 	.word case1
 	.word case2
 	.word case3
     
-	; method
-	.global state_advance
-	; variables
-	.extern switchSM
+	.global state_advance; method
+	.extern switchSM ; variable
     
 state_advance:
 	cmp &switchSM, #4 ; if switchSm > 4 jump to end
