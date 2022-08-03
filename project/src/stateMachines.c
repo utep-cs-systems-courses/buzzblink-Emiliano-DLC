@@ -8,7 +8,7 @@ static char led_state = 0;
 
 void SWone(){
   static char state = 0;
-  switch(state);
+  switch(state){
   case 0:
     red_on = 1;
     green_on = 1;
@@ -41,6 +41,7 @@ void SWone(){
       buzzer_set_period(2500);
       state = 0;
     break;
+    }
 }
 
 void SWtwo(){
