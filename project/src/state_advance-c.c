@@ -1,8 +1,8 @@
 #include <msp430.h>
-//#include <time.h>
-//#include "led.h"
-//#include "buzzer.h"
-//#include "switches.h"
+#include <time.h>
+#include "led.h"
+#include "buzzer.h"
+#include "switches.h"
 #include "stateMachines.h"
 #include "state_advance.h"
 
