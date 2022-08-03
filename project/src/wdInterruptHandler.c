@@ -13,5 +13,4 @@ __interrupt_vec(WDT_VECTOR) WDT(){	/* 250 interrupts/sec */
     else{
       blink_count = 0;
       }
-  }//
 }
