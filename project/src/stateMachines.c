@@ -46,6 +46,7 @@ void SWone(){
 
 void SWtwo(){
  red_on ^= 1;
+ green_on ^= 1;
  led_changed = 1;
  led_update();
 }
