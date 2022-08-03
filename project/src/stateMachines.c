@@ -4,10 +4,10 @@
 #include "buzzer.h"
 #include "switches.h"
 
-static char led_state = 0;
+static char state = 0;
 
 void SWone(){
-  static char state = 0;
+  //static char state = 0;
   switch(state){
   case 0:
     red_on = 1;
