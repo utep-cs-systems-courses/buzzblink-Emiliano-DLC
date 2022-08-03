@@ -19,12 +19,6 @@ void switch_interrupt_handler();
 //variables (Not needed)
 //extern char switch_state_down, switch_state_changed; /* effectively boolean */
 
-//New used variabes
-//Current status of the button
-extern char sw1_curr_stat;
-extern char sw2_curr_stat;
-extern char sw3_curr_stat;
-extern char sw4_curr_stat;
 
 extern char switch_state_changed;
 
