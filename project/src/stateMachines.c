@@ -7,8 +7,8 @@
 static char led_state = 0;
 
 void SWone(){
-  red_on = 1;
-  green_on = 1;
+  red_on ^= 1;
+  green_on ^= 1;
   led_changed = 1;
   led_update();
   buzzer_set_period(5000);
