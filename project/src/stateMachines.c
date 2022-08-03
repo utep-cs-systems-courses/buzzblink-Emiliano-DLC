@@ -33,7 +33,7 @@ void SWone(){
       state = 0;
     break;
     }
-    SWone();
+    //SWone();
 }
 
 void SWtwo(){
