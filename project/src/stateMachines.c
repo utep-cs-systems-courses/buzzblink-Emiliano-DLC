@@ -25,16 +25,8 @@ void SWone(){
       state = 2;
     break;
   case 2:
-  red_on ^= 1;
-  green_on = 1;
-  led_changed = 1;
-  led_update();
-      buzzer_set_period(2500);
-      state = 3;
-    break;
-  case 3:
-  red_on = 1;
-  green_on ^= 1;
+  red_on = 0;
+  green_on = 0;
   led_changed = 1;
   led_update();
       buzzer_set_period(0);
