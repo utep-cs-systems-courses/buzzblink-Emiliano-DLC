@@ -45,10 +45,10 @@ switch_interrupt_handler()
   char p2val = switch_update_interrupt_sense();
 
   //Chech each button
-  sw1_curr_stat = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
-  sw2_curr_stat = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
-  sw3_curr_stat = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
-  sw4_curr_stat = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
+  char sw1_curr_stat = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
+  char sw2_curr_stat = (p2val & SW2) ? 0 : 1; /* 0 when SW2 is up */
+  char sw3_curr_stat = (p2val & SW3) ? 0 : 1; /* 0 when SW3 is up */
+  char sw4_curr_stat = (p2val & SW4) ? 0 : 1; /* 0 when SW4 is up */
  
 
   if (sw1_curr_stat){switchSM = 0;}
