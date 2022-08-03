@@ -38,9 +38,10 @@ void SWone(){
 
 void SWtwo(){
  red_on ^= 1;
- green_on ^= 1;
+ green_on = 0;
  led_changed = 1;
  led_update();
+ buzzer_set_period(1500);
 }
 
 void SWtree(){
