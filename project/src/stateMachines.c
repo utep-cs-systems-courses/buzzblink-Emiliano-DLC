@@ -13,7 +13,7 @@ void SWone(){
     green_on = 1;
     led_changed = 1;
     led_update();
-    buzzer_set_period(5000);
+    buzzer_set_period(20000);
     state = 1;
     break;
   case 1:
@@ -29,7 +29,7 @@ void SWone(){
   green_on = 1;
   led_changed = 1;
   led_update();
-      buzzer_set_period(7500);
+      buzzer_set_period(2500);
       state = 3;
     break;
   case 3:
@@ -37,7 +37,7 @@ void SWone(){
   green_on ^= 1;
   led_changed = 1;
   led_update();
-      buzzer_set_period(2500);
+      buzzer_set_period(0);
       state = 0;
     break;
     }
